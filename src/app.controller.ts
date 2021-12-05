@@ -34,4 +34,10 @@ export class AppController {
   async register(@Body() createUserData: CreateUserDto) {
     return this.authService.register(createUserData);
   }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('validate')
+  async validate(@Request() req) {
+    return req.user;
+  }
 }
