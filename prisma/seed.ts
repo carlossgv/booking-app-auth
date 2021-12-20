@@ -27,9 +27,13 @@ const users: CreateUserDto[] = [
 
 const main = async () => {
   users.forEach(async (user) => {
-    await prisma.user.create({
-      data: user,
-    });
+    try {
+      await prisma.user.create({
+        data: user,
+      });
+    } catch (e) {
+      console.error(e);
+    }
   });
 };
 
