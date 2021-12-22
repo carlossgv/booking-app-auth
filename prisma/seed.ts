@@ -23,6 +23,18 @@ const users: CreateUserDto[] = [
     lastName: 'User',
     isActive: false,
   },
+  {
+    email: 'owner@owner.com',
+    password: 'owner',
+    firstName: 'Owner',
+    lastName: 'Man',
+  },
+  {
+    email: 'zurdo@zurdo.com',
+    password: 'zurdo',
+    firstName: 'Zurdo',
+    lastName: 'G',
+  },
 ];
 
 const main = async () => {
